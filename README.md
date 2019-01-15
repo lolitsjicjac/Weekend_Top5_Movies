@@ -14,3 +14,6 @@ By default if you do not pass anything it will go to second week of 2019.
 
 This function returns the top 5 movies in a dataframe with their weeklky gross.
 
+## To run the code
+
+### get_weekend_movie_top5_performers(change_string())
