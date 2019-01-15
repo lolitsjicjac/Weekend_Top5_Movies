@@ -55,44 +55,6 @@ get_weekend_movie_top5_performers(change_string())
 
 
 
-
-#
-##weekend_top5 = weekend_top5.replace("wknd=02", "wknd=01")     
-#link = requests.get(weekend_top5)
-#soup = bs(link.content, "lxml")
-#weekend_gross = soup.select("tr td font b")
-#
-##Slicing the data to only include movies
-#for index, value in enumerate(weekend_gross):
-#    if "Weekend Gross" in str(value):
-#        first_slice = index+1
-#    elif "TOTAL (" in str(value):
-#        end_slice = index+2
-#
-##for index, value in enumerate(weekend_gross):
-##    print(index, value)
-#
-##Removing all the uneccessary stuff
-#weekend_gross = weekend_gross[first_slice:end_slice]
-#clean_movies = [re.sub("<.*?>", "", str(movie)) for index, movie in enumerate(weekend_gross) if index % 2 == 0]
-#clean_wknd_gross = ["{:.2f}".format(round((float(re.sub("\D", "", str(movie)))/1000000),2)) for index, movie in enumerate(weekend_gross) if index % 2 == 1 ]
-#weekend_box_office = pd.DataFrame({"Movie_Name": clean_movies, "Weekend_Gross": clean_wknd_gross})
-#
-##The top 5 movies of the weekend
-#print(weekend_box_office.iloc[0:5])
-##print(weekend_box_office)
-
-
-
-#If you want to change the year of the link
-#weekend_top5 = "https://www.boxofficemojo.com/weekend/chart/?yr=2019&wknd=02&p=.htm"
-#weekend_top5 = weekend_top5.replace("yr=2019", "yr=2018")
-
-##Gets the top 5 movies from box office mojo
-#weekend_top5 = "https://www.boxofficemojo.com/weekend/chart/?yr=2019&wknd=02&p=.htm"
-    
-    
-    
     
     
     
